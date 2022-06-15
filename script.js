@@ -22,9 +22,9 @@ search('average').onclick = average;
 
 search('total').onclick = total;
 
-search('clear').onclick = () => {
+search('reset').onclick = () => {
   timeoutids.forEach((id) => clearTimeout(id));
-  timeoutids = {};
+  timeoutids = [];
   search('to').innerText = 0;
   search('av').innerText = 0;
   search('list').innerText = '';
