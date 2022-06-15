@@ -2,6 +2,7 @@ search = (id) => document.getElementById(id);
 let timeoutids = [];
 search('roll').onclick = () => {
   timeoutids.forEach((id) => clearTimeout(id));
+  timeoutids = {};
   if (search('times').value > 20) {
     search('list').innerText = "can't go above 20!";
     return;
@@ -23,6 +24,7 @@ search('total').onclick = total;
 
 search('clear').onclick = () => {
   timeoutids.forEach((id) => clearTimeout(id));
+  timeoutids = {};
   search('to').innerText = 0;
   search('av').innerText = 0;
   search('list').innerText = '';
